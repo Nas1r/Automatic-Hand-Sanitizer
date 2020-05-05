@@ -20,10 +20,10 @@ void setup() {
 
 void loop() {
     if(digitalRead(sensorPin)==0){ // Detect the hand 
-     // 0     ==      0 >> True
-      currentMillis = millis(); // start timer
-      //5000                0                700
-      if (currentMillis - previousMillis >= interval){ // if the hand is still there >>false
+      
+       currentMillis = millis(); // start timer
+       
+       if (currentMillis - previousMillis >= interval){ // if the hand is still there >>false
         myservo.write(0); // move servo
         delay(1000);      // wait till it's moved
         myservo.write(180);// bring the servo back to its position
